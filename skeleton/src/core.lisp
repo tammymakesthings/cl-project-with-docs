@@ -1,10 +1,19 @@
+;; -*- Lisp; lexical-binding: t; fill-column: 90; encoding: utf-8; -*-
+;;;;
+;;;; File       :
+;;;; Description:
+;;;; Created    :
+;;;; Last Update:
+;;;;
+
+(in-package #:cl-user)
+
 (defpackage #:<% @var name %>/core
-   (:nicknames #:<% @var name %>)
    (:use #:cl)
    (:export #:foo
             #:bar))
-(in-package <% @var name %>/core)
 
+(in-package <% @var name %>/core)
 
 (defun foo (a b)
   "Prints its arguments as a list.
@@ -35,3 +44,6 @@ But if you want to show repl session then use:
      (terpri)
      (foo ,a ,b)
      (terpri)))
+
+;;;;
+;;;; vim: set ft=lisp ts=2 sw=2 ai tw=90

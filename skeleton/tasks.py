@@ -1,15 +1,31 @@
+"""
+Task definitions for pyinvoke to build documentation
+"""
+
 import os
 import sys
+from pathlib import Path
 
-from invoke import task, run
+from invoke import run
+from invoke.tasks import task
 
+ROOT_PATH = Path(__FILE__).parent
 
 @task
-def build_docs(ctx):
+def build(ctx):
+    """Builds the system"""
+    return run('sbcl --no-userinit --load ./scripts/build-system.lisp --quit')
+
+def test(ctx):
+    """Tests the system"""
+    return run('sbcl --no-userinit --load ./scripts/test-system.lisp --quit')
+
+@task
+def build_docs(ctx):        # pylint:disable=unused-argument
     """Builds html documentation and updates gh-pages branch.
     """
     def git(cmd):
-        return run('cd docs/build/html && git {0}'.format(cmd))
+        return run(f'cd docs/build/html && git {cmd}')
 
     # build docs
     run('cd docs && make html')
@@ -21,14 +37,15 @@ def build_docs(ctx):
         if not os.path.exists('docs/build/html/.git'):
             result = run("git remote -v | grep '^origin.*(push)$'", warn=True)
 
-            if result.failed:
-                print('There is no "origin" remote in this git repository.')
-                print('Please, add remote and push it to the Github.')
-                sys.exit(1)
-            else:
-                origin = result.stdout.strip().split()[1]
-                git('init')
-                git('remote add origin {0}'.format(origin))
+            if result:
+                if result.failed:
+                    print('There is no "origin" remote in this git repository.')
+                    print('Please, add remote and push it to the Github.')
+                    sys.exit(1)
+                else:
+                    origin = result.stdout.strip().split()[1]
+                    git('init')
+                    git(f'remote add origin {origin}')
 
         git('add .')
         git('commit -m "Update docs"')

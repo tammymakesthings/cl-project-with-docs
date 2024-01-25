@@ -1,5 +1,5 @@
 #!/bin/sh
-#|-*- mode:lisp -*-|#
+#|-*- Lisp; lexical-binding: t; encoding: utf-8; fill-column: 90; -*-|#
 #|
 exec ros -Q -- $0 "$@"
 |#
@@ -42,4 +42,4 @@ exec ros -Q -- $0 "$@"
                     :log log
                     :token token)))
 
-;;; vim: set ft=lisp lisp:
+;;;; vim: set ft=lisp ts=2 sw=2 ai tw=90
