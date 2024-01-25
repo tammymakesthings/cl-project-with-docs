@@ -1,0 +1,9 @@
+{
+    "recommendations": [
+        "rheller.alive",
+        "mhutchie.git-graph",
+        "eamodio.gitlens",
+        "mattn.Lisp",
+        "clptn.code-paredit"
+    ]
+}

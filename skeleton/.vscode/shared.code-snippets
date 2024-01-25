@@ -1,0 +1,23 @@
+{
+    "Lisp File Header": {
+        "scope" "lisp",
+        "prefix" [
+            "lispheader"
+        ],
+        "body": [
+            ";; -*- Lisp; lexical-binding: t; fill-column: 90; encoding: utf-8; -*-",
+            ";;;;",
+            ";;;; File       :",
+            ";;;; Description:",
+            ";;;; Created    :",
+            ";;;; Last Update:",
+            ";;;;",
+            "",
+            "$0",
+            "",
+            ";;;;",
+            ";;;; vim: set ft=lisp ts=2 sw=2 ai tw=90",
+        ],
+        "description": "Lisp File Header/Footer"
+    },
+}

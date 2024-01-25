@@ -1,0 +1,57 @@
+{
+	"alive.format.indentWidth": 2,
+	"alive.lsp.downloadUrl": "https://api.github.com/repos/nobody-famous/alive-lsp/releases",
+	"alive.lsp.install.path": "/Users/tammycravit/common-lisp/alive-lsp",
+	"alive.lsp.remote.port": 8006,
+	"alive.lsp.startCommand": [
+		"sbcl",
+		"--eval",
+		"(require :asdf)",
+		"--eval",
+		"(asdf:load-system :alive-lsp)",
+		"--eval",
+		"(alive/server::start :port 8006)"
+	],
+
+	"editor.formatOnType": true,
+	"editor.autoIndent": "full",
+	"editor.trimAutoWhitespace": true,
+
+	"esbonio.server.enabled": false,
+
+	"files.encoding": "utf8",
+	"files.eol": "\n",
+	"files.exclude": {
+		"**/.git": true,
+		"**/.svn": true,
+		"**/.hg": true,
+		"**/CVS": true,
+		"**/.DS_Store": true,
+		"**/Thumbs.db": true
+	},
+	"files.defaultLanguage": "lisp",
+	"files.insertFinalNewline": true,
+	"files.trimFinalNewlines": true,
+	"files.trimTrailingWhitespace": true,
+
+    "git.branchProtection": [
+        "main",
+        "master",
+        "release/*",
+        "release-*"
+    ],
+    "git.branchProtectionPrompt": "alwaysCommitToNewBranch",
+	"git.pullBeforeCheckout": true,
+	"git.mergeEditor": true,
+
+	"python.testing.autoTestDiscoverOnSaveEnabled": false,
+	"python.testing.promptToConfigure": false,
+	"python.testing.pytestEnabled": false,
+	"python.testing.unittestEnabled": false,
+
+	"pythonTestExplorer.testFramework": null,
+
+	"[lisp]": {
+		"editor.wordSeparators": "`|;:'\",()"
+	}
+}
