@@ -1,9 +1,7 @@
 ;; -*- Lisp; lexical-binding: t; fill-column: 90; encoding: utf-8; -*-
 ;;;;
-;;;; File       :
-;;;; Description:
-;;;; Created    :
-;;;; Last Update:
+;;;; File       : t/package.lisp
+;;;; Description: Package setup for <% @var name %>-test
 ;;;;
 
 #+quicklisp

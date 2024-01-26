@@ -1,9 +1,7 @@
 ;; -*- Lisp; lexical-binding: t; fill-column: 90; encoding: utf-8; -*-
 ;;;;
-;;;; File       :
-;;;; Description:
-;;;; Created    :
-;;;; Last Update:
+;;;; File       : t/core.lisp
+;;;; Description: Tests for <% @var name %>/core
 ;;;;
 
 (defpackage #:<% @var name %>-test/core

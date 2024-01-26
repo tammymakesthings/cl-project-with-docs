@@ -1,9 +1,7 @@
 ;; -*- Lisp; lexical-binding: t; fill-column: 90; encoding: utf-8; -*-
 ;;;;
-;;;; File       :
-;;;; Description:
-;;;; Created    :
-;;;; Last Update:
+;;;; File       : src/core.lisp
+;;;; Description: <% @var name %> core code
 ;;;;
 
 (in-package #:cl-user)
